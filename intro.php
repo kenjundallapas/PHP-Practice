@@ -7,15 +7,11 @@
 </head>
 <body>
 
-<?php
+Welcome <?php echo $_POST["name"]; ?><br>
+You are <?php echo $_POST["age"]; ?> years old.<br>
+Your favorite color is: <?php echo $_POST["color"]; ?>
 
-    $name="Kenjun Dallapas";
-    $age="20";
-    $color="red";
-
-    echo "Hi, I am $name, $age years old, and my favourite color is $color";
-
-?>
+<p><a href="index.php">Go back to the index</a></p>
 
 </body>
 </html>

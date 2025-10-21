@@ -5,18 +5,13 @@
 
 <?php
 
-// Check if the form was submitted via POST before trying to access $_POST keys
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    // Retrieve and convert the input values to numbers
-    $a = (float)($_POST["a"] ?? 0); // Use 0 if 'a' is missing (safe practice)
-    $b = (float)($_POST["b"] ?? 0); // Use 0 if 'b' is missing
+    $a = (float)($_POST["a"] ?? 0);
+    $b = (float)($_POST["b"] ?? 0); 
     
     $sum = $a + $b;
     $difference = $a - $b;
     $product = $a * $b;
-    
-    // Handle division by zero to prevent an error
     $quotient = ($b != 0) ? ($a / $b) : "Undefined (Cannot divide by zero)";
 
     echo "Value of A: " . $a . "<br>";
@@ -26,11 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "The product is " . $product . "<br>";
     echo "The quotient is " . $quotient . "<br>";
     
-} else {
-    // Message if the page is accessed directly
-    echo "Please use the form to input values for calculation.";
-}
-
 ?>
 
 <p><a href="index.php">Go back to the index</a></p>

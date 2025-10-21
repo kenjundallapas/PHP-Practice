@@ -9,16 +9,24 @@
 
 <?php
 
-    $weight = 65;
-    $height = 1.70;
-    $bmi = $weight / ($height * $height);
-    $bmi = round($bmi, 2);
+    $weight = (float)($_POST["weight"] ?? 0);
+    $height = (float)($_POST["height"] ?? 0);
+    $bmi = 0;
+    
+    if ($height > 0) {
+        $bmi = $weight / ($height * $height);
+        $bmi = round($bmi, 2);
+    } else {
+        $bmi = "N/A (Height must be > 0)";
+    }
 
-    echo "Weight: " .$weight. " kg<br>";
-    echo "Height: " .$height. " m<br>";
-    echo "BMI: " .$bmi. "<br>";
+    echo "Weight: <strong> " .$weight. " kg</strong><br>";
+    echo "Height: <strong>" .$height. " m</strong><br>";
+    echo "BMI: <strong>" .$bmi. "</strong><br>";
 
 ?>
+
+<p><a href="index.php">Go back to the index</a></p>
 
 </body>
 </html>

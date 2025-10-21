@@ -9,18 +9,20 @@
 
 <?php
 
-    $basic_salary = 30000;
-    $allowance = 5000;
-    $deduction = 3000;
+    $basic_salary = (float)($_POST["basic_salary"] ?? 0);
+    $allowance = (float)($_POST["allowance"] ?? 0);
+    $deduction = (float)($_POST["deduction"] ?? 0);
     $net_salary = $basic_salary + $allowance - $deduction;
 
-    echo "Basic Salary: ₱" .$basic_salary. "<br>";
-    echo "Allowance: ₱" .$allowance. "<br>";
-    echo "Deduction: ₱" .$deduction. "<br>";
+    echo "Basic Salary: ₱<strong>" .$basic_salary. "</strong><br>";
+    echo "Allowance: ₱<strong>" .$allowance. "</strong><br>";
+    echo "Deduction: ₱<strong>" .$deduction. "</strong><br>";
     echo "-----------------------------<br>";
-    echo "Net Salary: ₱" .$net_salary. "<br>";
+    echo "Net Salary: ₱<strong>" .$net_salary. "</strong><br>";
 
 ?>
+
+<p><a href="index.php">Go back to the index</a></p>
 
 </body>
 </html>

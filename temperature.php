@@ -9,13 +9,16 @@
 
 <?php
 
-    $celsius = 30;
+    $celsius = (float)($_POST["celcius"] ?? 0);
     $fahrenheit = ($celsius * 9/5) + 32;
+    $fahrenheit_rounded = round($fahrenheit, 2);
 
-    echo "Celsius temperature: " .$celsius. "°C<br>";
-    echo "Converted to Fahrenheit: " .$fahrenheit. "°F<br>";
+    echo "Celsius temperature: <strong>" .$celsius. "°C</strong><br>";
+    echo "Converted to Fahrenheit: <strong>" .$fahrenheit_rounded. "°F </strong><br>";
 
 ?>
+
+<p><a href="index.php">Go back to the index</a></p>
 
 </body>
 </html>

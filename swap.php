@@ -9,22 +9,24 @@
 
 <?php
 
-    $x = 84;
-    $y = 26;
-
-    echo "Before swapping:<br>";
-    echo "x = " .$x. "<br>";
-    echo "y = " .$y. "<br><br>";
-
+    $x = (float)($_POST["x"] ?? 0);
+    $y = (float)($_POST["y"] ?? 0);
+    $x_initial = $x;
+    $y_initial = $y;
     $temp = $x;
     $x = $y;
     $y = $temp;
 
-    echo "After swapping:<br>";
-    echo "x = " .$x. "<br>";
-    echo "y = " .$y. "<br>";
+    echo "<h3>Before swapping:</h3>";
+    echo "X = <strong>" .$x_initial . "</strong><br>";
+    echo "Y = <strong>" .$y_initial . "</strong><br>";
+    echo "<h3>After swapping:</h3>";
+    echo "X is now = <strong>" .$x. "</strong><br>";
+    echo "Y is now = <strong>" .$y. "</strong><br>";
 
 ?>
+
+<p><a href="index.php">Go back to the index</a></p>
 
 </body>
 </html>

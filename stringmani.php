@@ -9,7 +9,7 @@
 
 <?php
 
-    $sentence = "vai TOMA TOMA toma vai";
+    $sentence = $_POST["input_string"] ?? "";
     $numChars = strlen($sentence);
     $numWords = str_word_count($sentence);
     $upper = strtoupper($sentence);
@@ -22,6 +22,8 @@
     echo "Lowercase: $lower<br>";
 
 ?>
+
+<p><a href="index.php">Go back to the index</a></p>
 
 </body>
 </html>

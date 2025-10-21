@@ -15,11 +15,11 @@
     <li><a href="swap_form.html">Swapping Variables</a></li>
     <li><a href="salary_form.html">Salary Calculator</a></li>
     <li><a href="bmicalc_form.html">BMI Calculator</a></li>
-    <li><a href="stringmani.php">String Manipulation</a></li>
-    <li><a href="bank.php">Bank Account Simulation</a></li>
-    <li><a href="gradesys.php">Simple Grading System</a></li>
-    <li><a href="currency.php">Currency Converter</a></li>
-    <li><a href="travelcost.php">Travel Cost Estimator</a></li>
+    <li><a href="stringmani_form.html">String Manipulation</a></li>
+    <li><a href="bank_form.html">Bank Account Simulation</a></li>
+    <li><a href="gradesys_form.html">Simple Grading System</a></li>
+    <li><a href="currency_form.html">Currency Converter</a></li>
+    <li><a href="travelcost_form.html">Travel Cost Estimator</a></li>
 </ul>
     
 </body>

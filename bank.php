@@ -9,18 +9,27 @@
 
 <?php
 
-    $balance = 1000;
-    $deposit = 500;
-    $withdraw = 300;
-    $balance = $balance + $deposit;
-    $balance = $balance - $withdraw;
+    $initial_balance = 1000.00;
+    $deposit = (float)($_POST["deposit"] ?? 0);
+    $withdraw = (float)($_POST["withdraw"] ?? 0);
+    $final_balance = $initial_balance;
+    $final_balance = $final_balance + $deposit;
+    $final_balance = $final_balance - $withdraw;
 
-    echo "Initial Balance: 1000<br>";
-    echo "Deposit Amount: $deposit<br>";
-    echo "Withdrawal Amount: $withdraw<br>";
-    echo "Final Balance: $balance<br>";
+    $initial_formatted = number_format($initial_balance, 2);
+    $deposit_formatted = number_format($deposit, 2);
+    $withdraw_formatted = number_format($withdraw, 2);
+    $final_formatted = number_format($final_balance, 2);
+
+    echo "<h3>Transaction Summary:</h3>";
+    echo "Initial Balance: ₱<strong>" . $initial_formatted . "</strong><br>";
+    echo "Deposit Amount: ₱<strong>" . $deposit_formatted . "</strong><br>";
+    echo "Withdrawal Amount: ₱<strong>" . $withdraw_formatted . "</strong><br>";
+    echo "Final Balance: ₱<strong>" . $final_formatted . "</strong><br>";
 
 ?>
+
+<p><a href="index.php">Go back to the index</a></p>
 
 </body>
 </html>

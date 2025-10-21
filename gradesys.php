@@ -9,10 +9,11 @@
 
 <?php
 
-    $math = 85;
-    $english = 92;
-    $science = 78;
+    $math = (float)($_POST["math"] ?? 0);
+    $english = (float)($_POST["english"] ?? 0);
+    $science = (float)($_POST["science"] ?? 0);
     $average = ($math + $english + $science) / 3;
+    $grade = "N/A";
 
     if ($average >= 90) {
         $grade = "A";
@@ -26,13 +27,15 @@
         $grade = "F";
     }
 
-    echo "Math Score: $math<br>";
-    echo "English Score: $english<br>";
-    echo "Science Score: $science<br>";
-    echo "Average Score: " .number_format($average, 2). "<br>";
-    echo "Grade: $grade<br>";
+    echo "Math Score: <strong>$math</strong><br>";
+    echo "English Score: <strong>$english</strong><br>";
+    echo "Science Score: <strong>$science</strong><br>";
+    echo "Average Score: <strong>" .number_format($average, 2). "</strong><br>";
+    echo "Grade: <strong>$grade</strong><br>";
 
 ?>
+
+<p><a href="index.php">Go back to the index</a></p>
 
 </body>
 </html>

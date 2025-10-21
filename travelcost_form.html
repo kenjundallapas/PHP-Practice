@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Cost Estimator</title>
+</head>
+<body>
+
+<h2>Travel Cost Estimator</h2>
+
+<form action="travelcost.php" method="POST">
+    Distance to Travel (km) <input type="number" name="distance" min="0" step="any" required><br>
+    Fuel Consumption (km/L) <input type="number" name="fuel_consumption" min="0.1" step="any" required><br>
+    FUel Price (₱/L) <input type="number" name="price" min="0" step="any" required><br>
+    <input type="submit" value="Calculate Cost">
+    
+</form>
+
+<p><a href="index.php">Go back to the index</a></p>
+    
+</body>
+</html>
